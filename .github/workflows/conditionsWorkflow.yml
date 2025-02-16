@@ -1,0 +1,13 @@
+name: Conditions workflow
+on: push
+jobs:
+  skip-or-run:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Skip or Run"
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Run"
+
